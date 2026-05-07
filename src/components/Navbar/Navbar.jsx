@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Navbar.css';
 
-function Navbar() {
-  const [active, setActive] = useState('Home');
-
+function Navbar({ activePage, setActivePage }) {
   const navLinks = ['Home', 'Quote', 'Resturants', 'Foods', 'Contact'];
 
   return (
@@ -21,9 +19,9 @@ function Navbar() {
         {navLinks.map((link) => (
           <li key={link}>
             <a
-              href={`#${link.toLowerCase()}`}
-              className={active === link ? 'active' : ''}
-              onClick={() => setActive(link)}
+              href="#"
+              className={activePage === link ? 'active' : ''}
+              onClick={(e) => { e.preventDefault(); setActivePage(link); }}
             >
               {link}
             </a>

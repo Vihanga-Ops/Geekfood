@@ -1,0 +1,46 @@
+.quote-page {
+  background-color: #ffffff;
+  min-height: calc(100vh - 64px);
+  padding: 3rem 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.quote-card {
+  background-color: #1e2a3a;
+  border-radius: 10px;
+  padding: 3rem 4rem;
+  text-align: center;
+  width: 100%;
+}
+
+.quote-text {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.65;
+  margin: 0 0 1rem 0;
+}
+
+.quote-author {
+  font-size: 0.88rem;
+  font-weight: 400;
+  color: #8b9ab0;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .quote-page {
+    padding: 2rem 1.25rem;
+    gap: 2rem;
+  }
+
+  .quote-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .quote-text {
+    font-size: 1rem;
+  }
+}
